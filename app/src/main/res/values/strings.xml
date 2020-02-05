@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">微信网页多窗口</string>
+    <string name="module_description">在微信中打开网页时使用多窗口模式，在最近任务列表中可以在微信页面和网页页面之间切换。</string>
+    <string name="module_unactivated">模块未激活！</string>
+    <string name="module_activated">模块已激活！</string>
+</resources>
