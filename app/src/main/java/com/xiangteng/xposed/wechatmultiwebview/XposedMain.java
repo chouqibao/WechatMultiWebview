@@ -2,12 +2,8 @@ package com.xiangteng.xposed.wechatmultiwebview;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.TextView;
-
-import java.lang.reflect.Field;
 
 import de.robv.android.xposed.IXposedHookLoadPackage;
 import de.robv.android.xposed.XC_MethodHook;
@@ -29,7 +25,8 @@ public class XposedMain implements IXposedHookLoadPackage {
                     String target = intent.getComponent().getClassName();
                     //Log.i(LOG_TAG + "-IntentTarget", target);
                     if (target.equals("com.tencent.mm.plugin.webview.ui.tools.WebViewUI")
-                            || target.equals("com.tencent.mm.plugin.webview.ui.tools.preload.TmplWebViewTooLMpUI")) {
+                            || target.equals("com.tencent.mm.plugin.webview.ui.tools.preload.TmplWebViewTooLMpUI")
+                            || target.equals("com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewTooLMpUI")) {
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
                         intent.addFlags(Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
                     }
